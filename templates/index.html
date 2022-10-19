@@ -1,0 +1,273 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+Home - Traadwik
+{% endblock title %}
+
+{% block mainContent %}
+<!-- slider -->
+<section class="banner-wrap">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 mx-auto text-center">
+                            <div class="b-title wow fadeInUp">
+                                <h2 class="display-4 fw-semibold">Traadwik Electric Solution Pvt Ltd</h2>
+                            </div>
+                            <div class="b-subtitle mt-4 px-5 wow fadeInUp ">
+                                <h5 class="">A Single Window Solution For Every Electrical Installation</h6>
+                            </div>
+                            <div class="btn-wrap  mt-5 wow fadeInUp">
+                                <a class="btn btn-primary py-2 px-3" href="#" role="button">Explore More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-image">
+                    <!-- <img src="{% static '/img/banner-img-1.png' %}" alt="Traadwik-Banner"> -->
+                    <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2022/01/slider_banner02.png"
+                        alt="Traadwik-Banner">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 mx-auto text-center">
+                            <div class="b-title wow  fadeInUp">
+                                <h2 class="display-4 fw-semibold">Traadwik Electric Solution Pvt Ltd</h2>
+                            </div>
+                            <div class="b-subtitle mt-4 px-5 wow fadeInUp">
+                                <h5 class="">A Single Window Solution For Every Electrical Installation</h6>
+                            </div>
+                            <div class="btn-wrap  mt-5 wow fadeInUp">
+                                <a class="btn btn-primary py-2 px-3" href="#" role="button">Explore More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-image">
+                    <img src="{% static '/img/banner-img-2.jpg' %}" alt="Traadwik-Banner">
+                    <!-- <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2022/01/slider_banner02.png"
+                        alt="Traadwik-Banner"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-1 spacing">
+    <div class="container">
+        <div class="row text-center wow fadeInUp">
+            <div class="col-12 col-md-8 offset-md-2 ">
+                <h2 class="heading-black">Traadwik !</h2>
+                <p>Established in 1983, SCS is one the fastest-growing electrical
+                    product distribution companies in India with an unrivaled
+                    experience catering to industrial & residential sectors.</p>
+                <div class="btn-wrap mt-4">
+                    <a class="brown-link" href="/about-us">Our Story <i class="fa-solid fa-angle-right"></i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-2 spacing bg-ascent">
+    <div class="containter">
+        <div class="row text-center g-0 wow fadeIn">
+            <div class="col-12 col-md-8 offset-md-2 ">
+                <p class="heading-brown fw-bolder mb-0 ">WE CAN</p>
+                <h2 class="heading-dark-green display-6">Channel <span class="heading-black">Partners</span></h2>
+            </div>
+        </div>
+        <div class="partner-slider mt-4">
+            <div class="container">
+                <div class="partners swiper">
+                    <div class="p-slides swiper-wrapper">
+                        <div class="p-items swiper-slide">
+
+                            <img src="{% static '/img/traadwik-logo.png' %}" alt="traadwik-logo" srcset="">
+                        </div>
+                        <div class="p-items swiper-slide">
+                            <img src="{% static '/img/traadwik-logo.png' %}" alt="traadwik-logo" srcset="">
+                        </div>
+                        <div class="p-items swiper-slide">
+                            <img src="{% static '/img/traadwik-logo.png' %}" alt="traadwik-logo" srcset="">
+                        </div>
+                        <div class="p-items swiper-slide">
+                            <img src="{% static '/img/traadwik-logo.png' %}" alt="traadwik-logo" srcset="">
+                        </div>
+                        <div class="p-items swiper-slide">
+                            <img src="{% static '/img/traadwik-logo.png' %}" alt="traadwik-logo" srcset="">
+                        </div>
+                        <div class="p-items swiper-slide">
+                            <img src="{% static '/img/traadwik-logo.png' %}" alt="traadwik-logo" srcset="">
+                        </div>
+                        <div class="p-items swiper-slide">
+                            <img src="{% static '/img/traadwik-logo.png' %}" alt="traadwik-logo" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="p_swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-3 spacing">
+    <div class="row text-center g-0">
+        <div class="col-12 col-md-8 offset-md-2 wow fadeIn ">
+            <p class="heading-brown fw-bolder mb-0 ">Explore</p>
+            <h2 class="heading-dark-green display-6">Our <span class="heading-black">Collection</span></h2>
+        </div>
+    </div>
+    <div class="gallery mt-4">
+        <div class="gallery-item height-1 wow fadeInLeft">
+            <div class="g-overlay">
+                <h6>Power Quality Products</h6>
+            </div>
+            <img src="{% static '/img/Power-Quality-Products.png' %}" alt="">
+        </div>
+        <div class="gallery-item height-2 wow fadeInUp">
+            <div class="g-overlay">
+                <h6>Home-automations</h6>
+            </div>
+            <img src="{% static '/img/home-automations.png' %}" alt="">
+        </div>
+        <div class="gallery-item height-3 wow fadeInRight">
+            <div class="g-overlay">
+                <h6>Power Factor</h6>
+            </div>
+            <img src="{% static '/img/pwrfactor.JPG ' %}" alt="">
+        </div>
+        <div class="gallery-item height-4 wow fadeInLeft">
+            <div class="g-overlay">
+                <h6>Managing</h6>
+            </div>
+            <img src="{% static '/img/banner-img-2.jpg' %}" alt="">
+        </div>
+        <div class="gallery-item height-5 wow fadeInUp">
+            <div class="g-overlay">
+                <h6>Medium Voltage</h6>
+            </div>
+            <img src="{% static '/img/medium-voltage.png' %}" alt="">
+        </div>
+        <div class="gallery-item height-6 wow fadeInRight">
+            <div class="g-overlay">
+                <h6>Protection Relays</h6>
+            </div>
+            <img src="{% static '/img/Protection-Relays.png' %}" alt="">
+        </div>
+    </div>
+</section>
+
+
+<section class="section-4 spacing">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="img-wrap text-center wow fadeInleft">
+                    <img src="{% static '/img/traadwik-logo.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <p class="heading-brown fw-bolder mb-0 wow fadeInUp">Established in 1983
+                </p>
+                <h2 class="heading-black display-5 mb-md-4 wow fadeInUp"> We are Traadwik </span></h2>
+                <div class="decr wow fadeInUp">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab expedita est doloremque inventore
+                        et? Reprehenderit harum odit consequatur officia, quidem ea delectus rerum eaque quis
+                        recusandae, quos alias dolor quod, explicabo illum! At id modi assumenda tempora laboriosam
+                        atque nobis!Reprehenderit harum odit consequatur officia, quidem ea delectus rerum eaque quis
+                        recusandae,</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-5 spacing">
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-12 col-md-6">
+                <p class="heading-brown fw-bolder mb-0 wow fadeInUp">Established in 1983
+                </p>
+                <h2 class="heading-black display-5 mb-md-4 wow fadeInUp"> We are Traadwik </span></h2>
+                <div class="decr wow fadeInUp">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab expedita est doloremque inventore
+                        et? Reprehenderit harum odit consequatur officia, quidem ea delectus rerum eaque quis
+                        recusandae, quos alias dolor quod, explicabo illum! At id modi assumenda tempora laboriosam
+                        atque nobis!Reprehenderit harum odit consequatur officia, quidem ea delectus rerum eaque quis
+                        recusandae,</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="img-wrap text-center wow fadeInRight">
+                    <img src="{% static '/img/traadwik-logo.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock mainContent %}
+
+{% block pageScript %}
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        autoplay: {
+            delay: 7000,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    var swiper = new Swiper(".partners", {
+        autoplay: {
+            delay: 3000,
+        },
+        loop: true,
+        speed: 1000,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+        scrollbar: {
+            el: '.our-clients .swiper-scrollbar',
+            draggable: true,
+        },
+        pagination: {
+            el: ".p_swiper-pagination",
+            dynamicBullets: true,
+        },
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+            // when window width is >= 640px
+            991: {
+                slidesPerView: 5,
+                spaceBetween: 35
+            }
+        }
+    });
+</script>
+{% endblock pageScript %}
