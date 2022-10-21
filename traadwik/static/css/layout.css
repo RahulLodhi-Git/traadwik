@@ -10,6 +10,7 @@ html {
 
 body {
     font-family: 'Open Sans','Roboto', sans-serif;
+    line-height: 1.875;
 }
 a{
     transition-duration: 0.5s;
@@ -59,7 +60,7 @@ ul{
 }
 
 .spacing {
-    padding: 90px 0;
+    padding: 90px 15px;
 }
 
 .heading-brown {
