@@ -25,4 +25,7 @@ urlpatterns = [
     path('contact-us/',views.contact,name='contact-us'),
     path('about-us/',views.about,name='about-us'),
     path('careers/',views.careers,name='careers'),
+    path('price-list/',views.priceList,name='price-list'),
+    path ('product-detail/<str:slug>/',views.productDetail,name='product-detail'),
+    path ('results/',views.search,name='search')
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
