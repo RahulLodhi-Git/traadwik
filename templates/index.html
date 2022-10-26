@@ -76,7 +76,7 @@ Home - Traadwik
 </section>
 
 <section class="section-2 spacing bg-ascent">
-    <div class="containter">
+    <div class="containter ">
         <div class="row text-center g-0 wow fadeIn">
             <div class="col-12 col-md-8 offset-md-2 ">
                 <p class="heading-brown fw-bolder mb-0 ">WE CAN</p>
@@ -189,35 +189,92 @@ Home - Traadwik
     </div>
 </section>
 
-<section class="section-5 spacing">
-    <div class="container">
-        <div class="row">
-          
-            <div class="col-12 col-md-6">
-                <p class="heading-brown fw-bolder mb-0 wow fadeInUp">Established in 1983
-                </p>
-                <h2 class="heading-black display-5 mb-md-4 wow fadeInUp"> We are Traadwik </span></h2>
-                <div class="decr wow fadeInUp">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab expedita est doloremque inventore
-                        et? Reprehenderit harum odit consequatur officia, quidem ea delectus rerum eaque quis
-                        recusandae, quos alias dolor quod, explicabo illum! At id modi assumenda tempora laboriosam
-                        atque nobis!Reprehenderit harum odit consequatur officia, quidem ea delectus rerum eaque quis
-                        recusandae,</p>
+<section class="about-row-4 spacing">
+    <div class="row text-center g-0">
+        <div class="col-12 col-md-8 offset-md-2 wow fadeIn ">
+            <p class="heading-brown fw-bolder mb-0 ">Our Brands</p>
+            <h2 class="heading-dark-green display-5">Our Latest <span class="heading-black "> Products Brands </span>
+            </h2>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="partners swiper">
+            <div class="p-slides swiper-wrapper">
+                <div class="p-items swiper-slide">
+
+                    <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2021/12/ww-weedo-green.png"
+                        alt="traadwik-logo" srcset="">
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="img-wrap text-center wow fadeInRight">
-                    <img src="{% static '/img/traadwik-logo.png' %}" alt="">
+                <div class="p-items swiper-slide">
+                    <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2021/12/ww-recreational-green.png"
+                        alt="traadwik-logo" srcset="">
+                </div>
+                <div class="p-items swiper-slide">
+                    <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2021/12/ww-weedo-green.png"
+                        alt="traadwik-logo" srcset="">
+                </div>
+                <div class="p-items swiper-slide">
+                    <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2021/12/ww-medicanna-green.png"
+                        alt="traadwik-logo" srcset="">
+                </div>
+                <div class="p-items swiper-slide">
+                    <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2021/12/ww-recreational-green.png"
+                        alt="traadwik-logo" srcset="">
+                </div>
+                <div class="p-items swiper-slide">
+                    <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2021/12/ww-weedo-green.png"
+                        alt="traadwik-logo" srcset="">
+                </div>
+                <div class="p-items swiper-slide">
+                    <img src="https://slidesigma.com/themes/wp/weefly/wp-content/uploads/2021/12/ww-medicanna-green.png"
+                        alt="traadwik-logo" srcset="">
                 </div>
             </div>
         </div>
+        <div class="p_swiper-pagination"></div>
     </div>
+
 </section>
 
 {% endblock mainContent %}
-
 {% block pageScript %}
 <script>
+    var swiper = new Swiper(".about-row-4  .partners", {
+        autoplay: {
+            delay: 3000,
+        },
+        loop: true,
+        speed: 1000,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+        scrollbar: {
+            el: '.our-clients .swiper-scrollbar',
+            draggable: true,
+        },
+        pagination: {
+            el: ".p_swiper-pagination",
+            dynamicBullets: true,
+        },
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+            // when window width is >= 640px
+            991: {
+                slidesPerView: 5,
+                spaceBetween: 35
+            }
+        }
+    });
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         effect: "fade",

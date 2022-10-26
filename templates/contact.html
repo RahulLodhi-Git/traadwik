@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+Contact Us - Traadwik
+{% endblock title %}
+
+{% block mainContent %}
+<div class="inner-banner">
+    <div class="container ">
+        <div class="inner_intro ">
+            <h1 class="display-4 wow fadeInUp">Contact Us</h1>
+            <div class="cm-breadcrumb wow fadeInUp">
+                <ul class="pagination">
+                    <li class="cm-breadcrumb-item"><a href="/">Home </a></li>
+                    <li class="cm-breadcrumb-item">&nbsp;/ Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact info -->
+<section class="contact-1 spacing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 align-self-center wow fadeInUp">
+                <div class="detail-wrap d-flex">
+                    <div class="detail-icon">
+                        <span> <i class="fa-solid fa-location-dot"></i></span>
+                    </div>
+                    <div class="details-text">
+                        <h4 class="heading-black">Address</h4>
+                        <p>Flat-301, Sujyoti Mansion, Ramjaipal Nagar Behind IDBI ATM Gola Road, Patna- 801503</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 align-self-center wow fadeInUp">
+                <div class="detail-wrap d-flex">
+                    <div class="detail-icon">
+                        <span> <i class="fa-regular fa-envelope"></i> </i></span>
+                    </div>
+                    <div class="details-text">
+                        <h4 class="heading-black">Email Us</h4>
+                        <p><a href="mailto:contact@traadwik.com">Contact@traadwik.com</a></p>
+                        <p><a href="https://wa.me/919758635932">Whatsapp Me</a></p>
+                        <p><a href="www.traadik.com">www.traadwik.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 align-self-center wow fadeInUp">
+                <div class="detail-wrap d-flex">
+                    <div class="detail-icon">
+                        <span> <i class="fa-solid fa-phone"></i></span>
+                    </div>
+                    <div class="details-text">
+                        <h4 class="heading-black">
+                            Call Us</h4>
+                        <p><a href="tel:+919758635932">+91-9758635932</a></p>
+                        <p><a href="tel:+919758635932">+91-9758635932</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact form -->
+<section class="contact-2 ">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="form-heading text-center">
+                    <h2 class="heading-dark-green display-6">Get In <span class="heading-black">Touch</span></h2>
+                    <h5>Get in contact with us by filling out our contact form
+                    </h5>
+                </div>
+                <div class="form-wrap">
+                    <form action="/contact-us" method="post">
+                        <input  placeholder="Enter name " type="text" name="name" id="name">
+                        <input placeholder="Enter email" type="email" name="email" id="email">
+                        <input placeholder="Subject" type="text" name="subject" id="subject">
+                        <textarea rows=7 placeholder="Type a message" type="message" name="message" id="message"></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact-map -->
+<section class="contact-3 ">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651110.286236378!2d81.00680043381777!3d26.66329043713012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57bcff7865f1%3A0x34ef4bd5fad75221!2sTRAADWIK%20ELECTRIC%20SOLUTION%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1666262981554!5m2!1sen!2sin"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+
+
+{% endblock mainContent %}
