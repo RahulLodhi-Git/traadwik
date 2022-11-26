@@ -31,61 +31,39 @@ Price List - Traadwik
     </div>
     <div class="container spacing price-list">
         <div class="inner">
+            {% if pList|length > 0 %}
+            {% for item in pList %}
+
             <div class="row g-0 mb-5">
                 <div class="col-md-7 product-logo">
-                    <img src="https://systemcontrols.co.in/wp-content/uploads/2020/10/schneider.png"
-                        alt="Schneider">
+                    <img src="/media/{{item.img}}"
+                        alt="{{item.brand_name}}">
                 </div>
                 <div class="col-md-5">
                     <div class="btn-wrap">
-                        <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
+                        <a href="/media/{{item.pdf}}"
                             target="_blank" class="btn btn-primary">Price List</a>
                     </div>
                 </div>
             </div>
-            <div class="row g-0 mb-5">
-                <div class="col-md-7 product-logo ">
-                    <img src="https://systemcontrols.co.in/wp-content/uploads/2020/10/legrand.png"
-                        alt="legrand">
+
+            {% endfor %}
+            {%else%}
+
+            <div class="row c-items">
+                <div class="col-md-3 col-12">
+                    <h6>No role</h6>
                 </div>
-                <div class="col-md-5">
-                    <div class="btn-wrap">
-                        <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
-                            target="_blank" class="btn btn-primary">Price List</a>
-                    </div>
+                <div class="col-md-7 col-12">
+                    <p>No vacanies found at that time.</p>
+                    <p>for Upcoming vacanies Please emailed your skills, details and locations. </p>
                 </div>
-            </div>
-            <div class="row g-0 mb-5">
-                <div class="col-md-7 product-logo">
-                    <img src="https://systemcontrols.co.in/wp-content/uploads/2020/10/schneider.png"
-                        alt="Schneider">
-                </div>
-                <div class="col-md-5">
-                    <div class="btn-wrap">
-                        <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
-                            target="_blank" class="btn btn-primary">Price List</a>
-                            <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
-                            target="_blank" class="btn btn-primary">Price List</a>
-                            <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
-                            target="_blank" class="btn btn-primary">Price List</a>
-                    </div>
+                <div class="col-md-2 col-12">
+                    <a href="mailto:rahul.lodhi5003@gmail.com">Send Here</a>
                 </div>
             </div>
-            <div class="row g-0 mb-5">
-                <div class="col-md-7 product-logo">
-                    <img src="https://systemcontrols.co.in/wp-content/uploads/2020/10/legrand.png"
-                        alt="Schneider">
-                </div>
-                <div class="col-md-5">
-                    <div class="btn-wrap">
-                        <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
-                            target="_blank" class="btn btn-primary">Price List</a>
-                            <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
-                            target="_blank" class="btn btn-primary">Price List</a>
-                           
-                    </div>
-                </div>
-            </div>
+
+            {%endif %}
         </div>
     </div>
 </section>

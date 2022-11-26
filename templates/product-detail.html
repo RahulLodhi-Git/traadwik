@@ -17,13 +17,11 @@
         </div>
         <div class="row g-0 mt-3">
             <div class="col-sm-8">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur repellendus ratione ab.
-                    Neque delectus maiores natus saepe voluptates ea deserunt, aliquid esse, voluptatem quidem, nihil
-                    maxime error sed quaerat!</p>
+                <p>{{ProductMeta.description}}</p>
             </div>
             <div class="col-sm-4">
                 <div class="brand-logo text-center">
-                    <img src="https://systemcontrols.co.in/wp-content/uploads/2020/10/legrand.png" alt="Legrand">
+                    <img src="/media/{{ProductMeta.img}}" alt="{{ProductMeta.brand_name}}">
                 </div>
 
             </div>
@@ -33,22 +31,43 @@
 
 <section class="spacing product-listing container">
     <div class="pl-inner row">
+        {% if productList|length > 0 %}
+{%for item in productList%}
         <div class="col-sm-6 col-md-3 col-lg-4 mb-4 wow  zoomIn">
             <div class="pl-item">
                 <div class="img">
-                    <img src="https://systemcontrols.co.in/wp-content/uploads/sku22-300x267.png" alt="">
+                    <img src="/media/{{item.img1}}" alt="{{item.name}}">
                 </div>
-                <h5>Circuit Breaker</h5>
+                <h5>{{item.name|capfirst }}</h5>
                 <div class="btn-wrap">
-                    <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
+                    <a href="/media/{{item.priceList}}"
                         target="_blank" class="btn btn-primary">Price List</a>
-                        <a href="https://systemcontrols.co.in/wp-content/uploads/PricePROKDVS.pdf"
+                    {% if item.priceList_2 != '' %}
+                        <a href="/media/{{item.priceList_2}}"
                         target="_blank" class="btn btn-primary">Price List</a>
+                    {%endif%}
+                    {% if item.priceList_3 != '' %}
+                    <a href="/media/{{item.priceList_3}}"
+                    target="_blank" class="btn btn-primary">Price List</a>
+                {%endif%}
                        
                 </div>
             </div>
         </div> 
-        <div class="col-sm-6 col-md-3 col-lg-4 mb-4 wow  zoomIn">
+        {%endfor%}
+        {%else%}
+        <div>
+            <h3 class=" text-center heading-brown">No Product Found...!</h3>
+            <div class='text-center'>
+              <a href='/' class='mb-5 heading-dark-green'>Go to Home</a>
+            </div>
+            <div class='text-center no-data'>
+              {% comment %} <img src="{% static 'img/no-data.png'%}" class='mb-5'/> {% endcomment %}
+            </div>
+          </div>
+        {%endif%}
+
+        {% comment %} <div class="col-sm-6 col-md-3 col-lg-4 mb-4 wow  zoomIn">
             <div class="pl-item">
                 <div class="img">
                     <img src="https://systemcontrols.co.in/wp-content/uploads/sku22-300x267.png" alt="">
@@ -137,7 +156,7 @@
                        
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
 
 
     </div>

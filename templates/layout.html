@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+
     <!-- slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- animate css -->
@@ -72,74 +72,60 @@
                         <div class="desktop-menu">
                             <ul class="level-1 ">
                                 <li class="menu-item"><a href="/about-us" class="menu-link">About Us</a></li>
+                                {% if brandList|length > 0 %}
                                 <li class="menu-item"><a href="/" class="menu-link">Brands</a><i
                                         class="fa-solid fa-angle-right child-trigger"></i>
                                     <ul class="level-2">
-                                        <li class="menu-item"><a class="menu-link" href="/legrand">Legrand </a>
+                                        {% for itemLevel1 in brandList %}
+                                        <li class="menu-item"><a class="menu-link"
+                                                href="/{{itemLevel1.slug}}">{{itemLevel1.name}} </a>
                                             <i class="fa-solid fa-angle-right  child-trigger"></i>
+                                            {% if ProductCat|length > 0 %}
                                             <ul class="level-3">
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/legrand-low-voltage-switchgears">Legrand low voltage switchgears</a>
+                                                {% for itemLevel2 in ProductCat %}
+                                                {% if itemLevel1.name == itemLevel2.brand_name %}
+                                                <li class="menu-item"><a class="menu-link"
+                                                        href="/product-detail/{{itemLevel2.slug}}">{{itemLevel2.name}}</a>
                                                 </li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/legrand-low-voltage-switchgears">Legrand low voltage switchgears</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/legrand-low-voltage-switchgears">Legrand low voltage switchgears</a></li>
+                                                {%endif%}
+                                                {%endfor%}
                                             </ul>
+                                            {%endif%}
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="/schneider">Schneider</a>
-                                            <i class="fa-solid fa-angle-right child-trigger"></i>
-                                            <ul class="level-3">
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/legrand">Product 1</a>
-                                                </li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Product
-                                                        2</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Product
-                                                        3</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Product
-                                                        4</a></li>
-                                            </ul>
-                                        </li>
+                                        {%endfor %}
                                     </ul>
                                 </li>
+                                {% endif %}
+
+                                {%if brandList|length > 0 %}
                                 <li class="menu-item product"><a href="/" class="menu-link">Products</a>
                                     <i class="fa-solid fa-angle-right child-trigger"></i>
                                     <ul class="level-2">
-                                        <li class="menu-item"><a class="menu-link" href="/legrand">Company 1</a>  <i class="fa-solid fa-angle-right child-trigger"></i>
-                                        <ul class="pmenu-list">
-                                            <li class="menu-item"><a class="menu-link" href="/product-detail/legrand-low-voltage-switchgears">Legrand low voltage switchgears</a> </li>
-                                            <li class="menu-item"><a class="menu-link" href="/product-detail/product-detail/schneider">Produt 2</a></li>
-                                            <li class="menu-item"><a class="menu-link" href="/product-detail/product-detail/schneider">Produt 3</a></li>
-                                            <li class="menu-item"><a class="menu-link" href="/product-detail/legrand-low-voltage-switchgears">Legrand low voltage switchgears</a></li>
-                                        </ul></li>
-                                        <li class="menu-item"><a class="menu-link" href="/schneider">Conpany 2</a>
-                                            <i class="fa-solid fa-angle-right child-trigger"></i>
+                                        {%for item in brandList%}
+                                        <li class="menu-item"><a class="menu-link"
+                                                href="/{{item.slug}}">{{item.name}}</a> <i
+                                                class="fa-solid fa-angle-right child-trigger"></i>
+                                            {%if ProductCat|length > 0 %}
                                             <ul class="pmenu-list">
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/'product-detail/legrand">Produt 1</a> </li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/'product-detail/schneider">Produt 2</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/'product-detail/schneider">Produt 3</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/'product-detail/schneider">Produt 4</a></li>
+                                                {% for item2 in ProductCat %}
+                                                {%if item.name == item2.brand_name %}
+                                                <li class="menu-item"><a class="menu-link"
+                                                        href="/product-detail/{{item2.slug}}">{{item2.name}}</a> </li>
+                                                {%endif%}
+                                                {%endfor %}
+                                               
                                             </ul>
+                                            {% endif %}
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="/schneider">Company 3</a> <i class="fa-solid fa-angle-right child-trigger"></i>
-                                            <ul class="pmenu-list">
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/legrand">Produt 1</a> </li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Produt 2</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Produt 3</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Produt 4</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a class="menu-link" href="/schneider">Company 4</a>
-                                            <ul class="pmenu-list">
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/legrand">Produt 1</a> </li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Produt 2</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Produt 3</a></li>
-                                                <li class="menu-item"><a class="menu-link" href="/product-detail/schneider">Produt 4</a></li>
-                                            </ul>
-                                        </li>
+                                        {%endfor%}
+
                                     </ul>
                                 </li>
+                                {%endif%}
                                 <li class="menu-item"><a href="/price-list" class="menu-link">Price List</a></li>
                                 <li class="menu-item"><a href="/contact-us" class="menu-link">Contact Us</a></li>
                                 <li class="menu-item"><a href="/careers" class="menu-link">Careers</a></li>
-                                
+
                             </ul>
                             <div class="mobile-toggle">
                                 <i class="fa-solid fa-xmark"></i>
@@ -152,9 +138,9 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                         <div class="mobile-toggle">
-                            <i class="fa-solid fa-bars"></i>                     
+                            <i class="fa-solid fa-bars"></i>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -183,26 +169,6 @@
 
     <!-- Footer -->
     <footer class="footer-wrap mt-md-5  ">
-        <!-- <div class="container footer-top">
-                <div class="row g-0">
-                    <div class="col-12 col-md-3  align-self-center  f-logo-wrap">
-                        <div class="logo wow fadeIn">
-                            <a href="/"><img src="{% static '/img/Traadwik-logo.png' %}" alt="Traadwik"></a>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-9 align-self-center text-center social-wrap">
-                        <div class="social-icons px-5">
-                            <ul>
-                                <li><a href="www.facebook.com"> <i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="www.youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
-                                <li><a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         <div class="footer-b wow fadeInUp">
             <div class="container">
                 <div class="left-info">

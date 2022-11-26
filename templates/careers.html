@@ -48,86 +48,35 @@ Careers - Traadwik
     </div>
     <div class="jobs-card container mt-5">
         <div class="jobs-inner row g-0">
+            {% if cList|length > 0%}
+            {%for item in cList%}
             <div class="col-md-6 col-lg-4">
                 <div class="job-item wow  zoomIn">
                     <div class="job-item-inrer">
-                        <h4>Sales Manager</h4>
-                        <p class="j-location">Delhi (Backend Office)</p>
-                        <p class="j-desc">Be a part of the SCS sales team</p>
-                        <a href="/careers/job/121" class="btn btn-primary mt-2">Apply Now</a>
+                        <h4>{{item.role}}</h4>
+                        <p class="j-location">{{item.location}}</p>
+                        <p class="j-desc">{{ item.description_1 }}</p>
+                        <a href="mailto:{{item.contact_email}}" class="btn btn-primary mt-2">Apply Now</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 ">
-                <div class="job-item wow  zoomIn">
-                    <div class="job-item-inrer">
-                        <h4>Sales Manager</h4>
-                        <p class="j-location">Delhi (Backend Office)</p>
-                        <p class="j-desc">Be a part of the SCS sales team</p>
-                        <a href="/careers/job/121" class="btn btn-primary mt-2">Apply Now</a>
-                    </div>
+
+         
+            {% endfor %}
+            {%else %}
+            <div class="row c-items">
+                <div class="col-md-3 col-12">
+                    <h6>No role</h6>
+                </div>
+                <div class="col-md-7 col-12">
+                    <p>No vacanies found at that time.</p>
+                    <p>for Upcoming vacanies Please emailed your skills, details and locations. </p>
+                </div>
+                <div class="col-md-2 col-12">
+                    <a href="careers@traadwik.com">Send Here</a>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="job-item wow  zoomIn">
-                    <div class="job-item-inrer">
-                        <h4>Sales Manager</h4>
-                        <p class="j-location">Delhi (Backend Office)</p>
-                        <p class="j-desc">Be a part of the SCS sales team</p>
-                        <a href="/careers/job/121" class="btn btn-primary mt-2">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="job-item wow  zoomIn">
-                    <div class="job-item-inrer">
-                        <h4>Marketing</h4>
-                        <p class="j-location">Delhi (Backend Office)</p>
-                        <p class="j-desc">Be a part of the SCS sales team</p>
-                        <a href="/careers/job/121" class="btn btn-primary mt-2">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="job-item wow  zoomIn">
-                    <div class="job-item-inrer">
-                        <h4>Sales Executive</h4>
-                        <p class="j-location">Delhi (Backend Office)</p>
-                        <p class="j-desc">Be a part of the SCS sales team</p>
-                        <a href="/careers/job/121" class="btn btn-primary mt-2">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="job-item wow  zoomIn" >
-                    <div class="job-item-inrer">
-                        <h4>Sales Manager</h4>
-                        <p class="j-location">Delhi (Backend Office)</p>
-                        <p class="j-desc">Be a part of the SCS sales team</p>
-                        <a href="/careers/job/121" class="btn btn-primary mt-2">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="job-item wow  zoomIn">
-                    <div class="job-item-inrer">
-                        <h4>Customer Relations Executive</h4>
-                        <p class="j-location">Delhi (Backend Office)</p>
-                        <p class="j-desc">Be a part of the SCS sales team</p>
-                        <a href="/careers/job/121" class="btn btn-primary mt-2">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="job-item wow  zoomIn">
-                    <div class="job-item-inrer">
-                        <h4>Chief Technology Officer</h4>
-                        <p class="j-location">Delhi (Backend Office)</p>
-                        <p class="j-desc">Be a part of the SCS sales team</p>
-                        <a href="/careers/job/121" class="btn btn-primary mt-2">Apply Now</a>
-                    </div>
-                </div>
-            </div>
+            {%endif%}
 
         </div>
     </div>

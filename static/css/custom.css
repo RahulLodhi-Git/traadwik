@@ -824,6 +824,11 @@ ul.level-3>li:hover {
 }
 
 /* Contact Page */
+.cm-alert {
+    top: 75px;
+    z-index: 999;
+    border-radius: 0;
+}
 .detail-wrap .detail-icon span {
     width: 80px;
     height: 80px;

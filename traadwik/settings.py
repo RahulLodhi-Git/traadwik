@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-xtg6n*t(s&x@nxs!n3p^o7x)^5(^o@4$%2=exb0!!p5%%u3(@t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #  For auto refresh
     'livereload',
-    'traadwik'
-
+    'traadwik.apps.TraadwikConfig'
 
 ]
 

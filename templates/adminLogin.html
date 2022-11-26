@@ -1,0 +1,29 @@
+{% extends 'adminLayout.html' %}
+{% load static %}
+{% block title %}
+Admin Login - Traadwik
+{% endblock title %}
+
+{% block mainContent %}
+<section class="admin-home-page">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 col-lg-5">
+                <div class="logo-wrap ">
+                    <a href="/"><img src="{% static '/img/Traadwik-logo.png' %}" alt="Traadwik"></a>
+                    <h4 class="heading-black mt-2">Traadwik Electic Pvt. Ltd.</h4>
+                </div>
+                <div class="form-wrap admin-form">
+                   <form action="/dashboard" method="POST">{% csrf_token %}
+                    <input type="email" name="email" placeholder="Enter email" id="email">
+                    <input type="password" name="password" placeholder="Enter password" id="password">
+                   <button type="submit" class="btn-primary btn">
+                        Submit <i class="fa-solid fa-angle-right"></i></i>
+                    </button>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock mainContent %}

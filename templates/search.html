@@ -21,87 +21,37 @@ Search Results - Traadwik
 
 <section class="spacing product-listing container">
     <div class="pl-inner row">
+        {% if result|length > 0%}
+        {%for item in result%}
         <div class=" col-md-10 mb-4 wow  zoomIn">
             <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
+                <h3>{{item.name}}</h3>
+                <p>{{item.Feature_1_description}}</p>
                 <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
+                    <a class="brown-link" href="/product-detail/{{item.subcategory}}/">Explore <i class="fa-solid fa-angle-right"></i></i></a>
+                    <a class="brown-link mx-2" href="/media/{{item.priceList}}/">Download Catalogue <i class="fa-solid fa-angle-right"></i></i></a>
+                    {% if item.priceList_2 != '' %}
+                    <a class="brown-link mx-2" href="/media/{{item.priceList_2}}/">Download Catalogue <i class="fa-solid fa-angle-right"></i></i></a>
+                    {%endif%}
+                    {% if item.priceList_3 != '' %}
+                    <a class="brown-link mx-2" href="/media/{{item.priceList_3}}/">Download Catalogue  <i class="fa-solid fa-angle-right"></i></i></a>
+                {%endif%}
                 </div>
             </div>
         </div>
-        <div class=" col-md-10 mb-4 wow  zoomIn">
-            <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
-                <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
-                </div>
+        {%endfor%}
+        {%else%}
+        <div>
+            <h3 class=" text-center heading-brown">No Product Found...!</h3>
+            <div class='text-center'>
+              <a href='/' class='mb-5 heading-dark-green'>Go to Home</a>
             </div>
-        </div>
-        <div class=" col-md-10 mb-4 wow  zoomIn">
-            <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
-                <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
-                </div>
+            <div class='text-center no-data'>
+              {% comment %} <img src="{% static 'img/no-data.png'%}" class='mb-5'/> {% endcomment %}
             </div>
-        </div>
-        <div class=" col-md-10 mb-4 wow  zoomIn">
-            <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
-                <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-10 mb-4 wow  zoomIn">
-            <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
-                <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-10 mb-4 wow  zoomIn">
-            <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
-                <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-10 mb-4 wow  zoomIn">
-            <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
-                <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-10 mb-4 wow  zoomIn">
-            <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
-                <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
-                </div>
-            </div>
-        </div>
-        <div class=" col-md-10 mb-4 wow  zoomIn">
-            <div class="pl-item search-item">
-                <h3>Circuit Breaker</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, architecto? Id, ad ipsa labore eaque quidem unde vitae numquam voluptatem similique totam reiciendis?</p>
-                <div class="btn-wrap">
-                    <a class="brown-link" href="/about-us">Explore <i class="fa-solid fa-angle-right"></i></i></a>
-                </div>
-            </div>
-        </div>
+          </div>
+        {%endif%}
+       
 
 
     </div>
